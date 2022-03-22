@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  --button-color: hsl(25, 97%, 53%);
+  --title-color: hsl(0, 0%, 100%);
+  --paragraph-color: hsl(217, 12%, 63%);
+  --ratingButtonColor: hsl(216, 12%, 54%);
+  --bodybgcolor: hsl(216, 12%, 8%);
+  --buttonbgcolor: rgb(36, 44, 53);
+  --cardbgcolor: linear-gradient(to top, rgb(23, 30, 40), rgb(33, 40, 50));
+  font-family: Overpass;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bodybgcolor);
+}
+@media screen and (min-width: 375px) and (max-width: 1440px) {
+  .card {
+    height: 359px;
+    width: 324px;
+    border-radius: 25px;
+    padding: 1.5em;
+    background: var(--cardbgcolor);
+  }
+  .icon-star {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: var(--buttonbgcolor);
+  }
+  .title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0.7em 0;
+    color: var(--title-color);
+  }
+  .content {
+    font-weight: 400;
+    color: var(--paragraph-color);
+    margin-bottom: 1em;
+    font-size: 15px;
+  }
+  .btnContainer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .ratingIcon {
+    color: var(--paragraph-color);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-decoration: none;
+    border: none;
+    background-color: var(--buttonbgcolor);
+  }
+  [value] {
+    text-align: center;
+  }
+  input:focus {
+    border: none;
+    outline: none;
+  }
+  .ratingIcon:hover {
+    color: var(--title-color);
+    background-color: var(--button-color);
+    cursor: pointer;
+  }
+  .subtn {
+    background-color: var(--button-color);
+    width: 100%;
+    margin: 1.5em 0;
+    padding: 1em;
+    border-radius: 25px;
+    border: none;
+    text-transform: uppercase;
+    color: var(--title-color);
+    font-weight: 700;
+    letter-spacing: 0.1em;
+  }
+
+  .subtn:hover {
+    color: hsl(25, 97%, 53%);
+    background-color: var(--title-color);
+    cursor: pointer;
+  }
+  .overlap {
+    height: 376px;
+    width: 329px;
+    display: none;
+  }
+  .active {
+    background: hsl(216, 12%, 54%);
+    color: hsl(0, 0%, 100%);
+  }
+
+  .ratingGiven {
+    color: var(--button-color);
+    border-radius: 25px;
+    padding: 6px 12px;
+    background-color: rgb(54, 64, 77);
+  }
+  .thanks-visible {
+    display: grid;
+    place-items: center;
+    text-align: center;
+  }
+}
