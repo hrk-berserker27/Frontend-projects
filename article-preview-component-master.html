@@ -129,7 +129,7 @@
         width: 100%;
         background-color: var(--VeryDarkGrayishBlue);
         border-radius: 0 0 10px 10px;
-        display: flex;
+        display: none;
         align-items: center;
         justify-content: flex-start;
         color: var(--GrayishBlue);
@@ -150,10 +150,9 @@
         fill: var(--shareColor);
         background-color: var(--desaturatedDarkBlue);
       }
-      /*selecting the active-state section on hovering over share button*/
-      #share-button:hover ~ .active-mobile {
-        z-index: 99;
-      }
+       .displayTooltip{
+          display: flex;
+        }
       /*Styling for large screen sizes*/
       @media screen and (min-width: 850px) {
         .card {
@@ -205,9 +204,6 @@
           padding-left: 3em;
           display: none;
         }
-        #share-button:hover ~ .active-mobile {
-          display: flex;
-        }
         .active-mobile::after {
           content: "";
           position: absolute;
@@ -222,6 +218,7 @@
         .attribution{
           display: none;
         }
+       
       }
     </style>
   </head>
@@ -297,5 +294,12 @@
         >Frontend Mentor</a
       >. Coded by <a href="#">Hritick</a>.
     </div>
+    <script>
+      const tooltip = document.querySelector(".active-mobile");
+      const shareBtn = document.querySelector(".link");
+      shareBtn.addEventListener("click",function(){
+        tooltip.classList.toggle(".displayTooltip");
+      })
+    </script>
   </body>
 </html>
