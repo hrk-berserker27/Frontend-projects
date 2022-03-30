@@ -296,7 +296,12 @@
       const tooltip = document.querySelector(".active-mobile");
       const shareBtn = document.querySelector(".link");
       shareBtn.addEventListener("click",function(){
-        tooltip.classList.toggle("displayTooltip");
+        if(tooltip.classList.contains("displayTooltip")){
+        tooltip.classList.remove("displayTooltip");
+        }
+        else{
+          tooltip.classList.add("displayTooltip");
+        }
       })
     </script>
 </html>
