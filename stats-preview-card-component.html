@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href=" https://hrk-berserker27.github.io/Frontend-projects/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Frontend Mentor | Stats preview card component</title>
+
+    <style>
+      /* resets*/
+      *,
+      *::after,
+      *::before {
+        box-sizing: border-box;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        --card-background: hsl(244, 38%, 16%);
+        --main-background: hsl(233, 47%, 7%);
+        --primary-color: hsl(0, 0%, 100%);
+        --paragraph-color: hsla(0, 0%, 100%, 0.75);
+        --stat-heading-color: hsla(0, 0%, 100%, 0.6);
+        --overlay-color: hsla(277, 62%, 38%, 0.6);
+        --font-primary: "Inter";
+        --font-secondary: "Lexend Deca";
+      }
+      span {
+        color: hsl(277, 64%, 61%);
+      }
+      .attribution {
+        display: none;
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+      body {
+        display: grid;
+        place-items: center;
+        min-height: 100vh;
+        background-color: var(--main-background);
+      }
+      .card {
+        height: 779px;
+        width: 335px;
+        border-radius: 0.5rem;
+        background-color: var(--card-background);
+        text-align: center;
+        overflow: hidden;
+      }
+      .image-container {
+        background: url(" https://hrk-berserker27.github.io/Frontend-projects/image-header-mobile.jpg");
+        height: 35%;
+        width: 100%;
+        background-size: cover;
+        position: relative;
+        border-radius: 0.5rem;
+      }
+      .image-container::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--overlay-color);
+      }
+      .title {
+        width: 100%;
+        font-weight: 700;
+        color: var(--primary-color);
+        font-family: var(--font-primary, "sans-serif");
+        padding: 0 1rem;
+        font-size: 1.8rem;
+      }
+      .content {
+        width: 35ch;
+        font-size: 15px;
+        padding: 1.2rem 2rem;
+        color: var(--paragraph-color);
+      }
+      .text-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem 1rem;
+        font-family: "Inter";
+      }
+      .stats {
+        margin: 1.5rem 0;
+        color: var(--stat-heading-color);
+        text-transform: uppercase;
+        font-size: 15px;
+        font-family: "Inter";
+      }
+      .stats h2 {
+        color: var(--primary-color);
+      }
+      .stats h2:first-child,
+      .stats h2:nth-child(2) {
+        text-transform: lowercase;
+      }
+      .stats span {
+        display: inline-block;
+        color: var(--stat-heading-color);
+        margin: 0.3rem 0 1.5rem 0;
+        font-family: "Lexend Deca";
+        font-weight: 400;
+        font-size: 0.8rem;
+      }
+      /* desktop design */
+      @media screen and (min-width: 1130px) {
+        .card {
+          height: 450px;
+          width: 1123px;
+          text-align: left;
+          display: grid;
+          grid-template-columns: 50% 50%;
+        }
+        .image-container {
+          width: 100%;
+          height: 100%;
+          background: url(" https://hrk-berserker27.github.io/Frontend-projects/image-header-desktop.jpg");
+          background-size: cover;
+          border-radius: 0 0 0.9rem 0.9rem;
+          grid-column: 2/3;
+          grid-row: 1/2;
+        }
+        .text-content {
+          width: 100%;
+          height: 100%;
+          padding: 5rem;
+          grid-column: 1/2;
+        }
+        .stats {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          grid-template-rows: repeat(2, 1fr);
+          width: 100%;
+          padding: 1rem 0;
+          grid-gap: 0.5rem 1rem;
+        }
+        .stats span {
+          margin: 0;
+          font-size: 15px;
+          color: var(--stat-heading-color);
+        }
+        .stats h2 {
+          margin: 0;
+          padding: 0;
+        }
+        .stats span:nth-child(2n) {
+          grid-row: 2/3;
+        }
+        .content {
+          width: 100%;
+          padding: 2rem 1rem 2rem 0;
+          line-height: 1.5rem;
+        }
+        .title {
+          width: 100%;
+          font-size: 2rem;
+          padding: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="card">
+      <div class="image-container" role="banner"></div>
+      <div class="text-content" role="contentinfo">
+        <h1 class="title">
+          Get <span>insights</span> that help your business grow.
+        </h1>
+        <div class="content">
+          Discover the benefits of data analytics and make better decisions
+          regarding revenue, customer experience, and overall efficiency.
+        </div>
+        <div class="stats">
+          <h2>10k+</h2>
+          <span>companies </span>
+          <h2>314</h2>
+          <span>templates</span>
+          <h2>12m+</h2>
+          <span>queries</span>
+        </div>
+      </div>
+    </main>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </body>
+</html>
