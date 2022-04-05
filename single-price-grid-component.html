@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor | Single Price Grid Component</title>
+
+    <style>
+      *,
+      *::after,
+      *::before {
+        box-sizing: border-box;
+      }
+      * {
+        padding: 0;
+        margin: 0;
+        --mobile-grid-height: 710px;
+        --mobile-grid-width: 310px;
+        --desktop-grid-height: 468px;
+        --desktop-grid-width: 632px;
+        --title-color: hsl(179, 62%, 43%);
+        --subtitle-color: hsl(71, 73%, 54%);
+        --text-color: hsl(204, 43%, 93%);
+        --duration-color: hsl(218, 22%, 67%);
+        --font-size: 16px;
+        font-family: "Karla";
+        --font-wgt1: 400;
+        --font-wgt2: 700;
+      }
+      body {
+        display: grid;
+        place-items: center;
+        min-height: 100vh;
+        background-color: var(--text-color);
+      }
+
+      .grid {
+        height: var(--mobile-grid-height);
+        width: var(--mobile-grid-width);
+        border-radius: 0.4rem;
+        overflow: hidden;
+      }
+      .heading-block {
+        width: 100%;
+        background-color: white;
+      }
+      .title {
+        font-weight: 700;
+        color: var(--title-color);
+        padding: 1.8rem 1.5rem 1.5rem;
+      }
+      .subtitle {
+        color: var(--subtitle-color);
+        font-weight: 700;
+        padding: 0 1.5rem 0rem 1.5rem;
+        font-size: 1rem;
+      }
+      .text-box {
+        font-size: 14px;
+        color: var(--duration-color);
+        width: 100%;
+        padding: 1rem 1.5rem 2rem;
+      }
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+      .subscription-box {
+        padding: 1.5rem 1.5rem 1.5rem;
+        background-color: hsl(179, 62%, 43%);
+      }
+      .subscription-title {
+        padding-bottom: 1rem;
+        font-size: 1.1rem;
+        color: white;
+      }
+      .price-tag {
+        font-size: 2rem;
+        color: white;
+        font-weight: 700;
+      }
+      .time-duration {
+        color: hsl(179, 62%, 70%);
+      }
+      .subscription-text {
+        color: hsl(179, 62%, 85%);
+        line-height: 2rem;
+      }
+      .sign-up-btn {
+        padding: 1rem;
+        width: 100%;
+        margin: 1.5rem 0 0 0;
+        font-size: 1rem;
+        background-color: var(--subtitle-color);
+        border: 0px;
+        color: white;
+        font-weight: 700;
+        border-radius: 0.4rem;
+        box-shadow: 0px 4px 10px hsl(179, 62%, 30%);
+      }
+      .footer-block {
+        background-color: hsl(179, 62%, 55%);
+        border-bottom-left-radius: 0.4rem;
+        border-bottom-right-radius: 0.4rem;
+      }
+      .footer-title {
+        padding: 1.8rem 1.5rem 1rem;
+        font-size: 1.2rem;
+        color: white;
+      }
+      .footer-text {
+        padding-left: 1.5rem;
+        color: hsl(179, 62%, 85%);
+        padding-bottom: 1.5rem;
+        font-size: 14px;
+        line-height: 1.2rem;
+      }
+      @media screen and (min-width: 800px) {
+        .grid {
+          width: 624px;
+          height: 473px;
+          display: flex;
+          flex-wrap: wrap;
+        }
+        .subscription-box {
+          width: 50%;
+          padding: 2.5rem 0rem 0 2.5rem;
+        }
+        .footer-block {
+          flex: 2;
+          border-bottom-left-radius: 0px;
+          padding: 0.5rem 1rem;
+          background-color: hsl(179, 62%, 48%);
+        }
+        .heading-block {
+          padding-left: 1rem;
+          padding-top: 0.8rem;
+        }
+        .text-box {
+          font-size: 16px;
+        }
+        .title {
+          font-size: 1.5rem;
+        }
+        .subtitle {
+          font-size: 1.1rem;
+        }
+        .sign-up-btn {
+          width: 85%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="grid">
+      <div class="heading-block">
+        <h3 class="title">Join our community</h3>
+        <h5 class="subtitle">30-day, hassle-free money back guarantee</h5>
+        <p class="text-box">
+          Gain access to our full library of tutorials along with expert code
+          reviews. Perfect for any developers who are serious about honing their
+          skills.
+        </p>
+      </div>
+
+      <div class="subscription-box">
+        <h5 class="subscription-title">Monthly Subscription</h5>
+        <apan class="price-tag">&dollar;29 </apan
+        ><span class="time-duration">per month</span>
+        <p class="subscription-text">
+          Full access for less than &dollar;1 a day
+        </p>
+        <button class="sign-up-btn">Sign Up</button>
+      </div>
+      <div class="footer-block">
+        <h5 class="footer-title">Why Us</h5>
+        <div class="footer-text">
+          <div>Tutorials by industry experts</div>
+          <div>Peer &amp;expert code review</div>
+          <div>Coding exercises</div>
+          <div>Access to our GitHub repos</div>
+          <div>Community forum</div>
+          <div>Flashcard decks</div>
+          <div>New videos every week</div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Hritick Bhushan</a>.
+      </p>
+    </footer>
+  </body>
+</html>
