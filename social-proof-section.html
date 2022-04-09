@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor | Social proof section</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        --Very__Dark__Magenta: hsl(300, 43%, 22%);
+        --Soft__Pink: hsl(333, 80%, 67%);
+        --Dark__Grayish__Magenta: hsl(303, 10%, 53%);
+        --Light__Grayish__Magenta: hsl(300, 24%, 96%);
+        --White: hsl(0, 0%, 100%);
+        font-family: "Spartan";
+      }
+      main {
+        width: 375px;
+        margin: auto;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        gap: 1.5rem;
+
+        padding: 5rem 2rem;
+        min-height: 100vh;
+      }
+      h1 {
+        width: 13ch;
+        line-height: 1.9rem;
+        color: var(--Very__Dark__Magenta);
+      }
+      .rating-section {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin: 1.5rem 0;
+        font-size: 15px;
+      }
+      .card-section {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+      .title-text {
+        color: var(--Dark__Grayish__Magenta);
+        font-size: 15px;
+        width: 28ch;
+        font-weight: 500;
+        line-height: 1.5rem;
+        margin-top: 1rem;
+      }
+
+      .user img {
+        height: 35px;
+        width: 35px;
+        border-radius: 50%;
+        display: inline-block;
+      }
+      .card {
+        display: flex;
+        flex-wrap: wrap;
+        text-align: left;
+        padding: 2.5rem 2rem;
+        background-color: var(--Very__Dark__Magenta);
+        border-radius: 0.5rem;
+        font-size: 15px;
+      }
+      .user {
+        display: flex;
+        gap: 1.5rem;
+        color: var(--White);
+        font-weight: 500;
+      }
+      .user div {
+        display: flex;
+        flex-direction: column;
+        gap: 0.2rem;
+      }
+      .user div span {
+        border: 1px;
+        color: var(--Soft__Pink);
+        font-weight: 400;
+      }
+      .userReview {
+        color: var(--Light__Grayish__Magenta);
+        padding-top: 1.5rem;
+        font-size: 12px;
+        line-height: 1.5rem;
+      }
+      .rate {
+        padding: 1rem;
+        font-weight: 700;
+        color: var(--Very__Dark__Magenta);
+        border-radius: 0.5rem;
+        background-color: var(--Light__Grayish__Magenta);
+      }
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+        display: none;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+      .rating-container {
+        margin-bottom: 0.5rem;
+      }
+      /* Designing desktop part */
+      @media screen and (min-width: 1440px) {
+        main {
+          width: 1440px;
+          height: 800px;
+
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          grid-template-rows: repeat(2, 1fr);
+          padding: 5rem 10rem;
+          text-align: left;
+        }
+        h1 {
+          grid-column: 1/2;
+          grid-row: 1/2;
+
+          font-size: 3rem;
+          line-height: 3rem;
+        }
+
+        .card-section {
+          grid-column: 1/4;
+          grid-row: 2/3;
+          flex-direction: row;
+        }
+        .rating-section {
+          grid-column: 2/4;
+          grid-row: 1/2;
+
+          display: grid;
+          grid-template-columns: repeat(10, 0.1fr);
+          grid-template-rows: repeat(3, 0.5fr);
+          padding: 2rem;
+          padding-right: 0;
+        }
+        .rate {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-evenly;
+          width: 100%;
+        }
+        .rate1 {
+          grid-column: 1/9;
+          grid-row: 1/2;
+        }
+        .rate2 {
+          grid-column: 2/10;
+          grid-row: 2/3;
+        }
+        .rate3 {
+          grid-column: 3/11;
+          grid-row: 3/4;
+        }
+        .title-text {
+          width: 100%;
+          padding-right: 1rem;
+        }
+        .card-section {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          grid-template-rows: repeat(16, 2px);
+          grid-column-gap: 2rem;
+        }
+        .card1 {
+          grid-row: 1/15;
+        }
+        .card2 {
+          grid-row: 2/16;
+        }
+        .card3 {
+          grid-row: 3/17;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div>
+        <h1>10,000+ of our users love our products.</h1>
+        <p class="title-text">
+          We only provide great products combined with excellent customer
+          service. See what our satisfied customers are saying about our
+          services.
+        </p>
+      </div>
+
+      <div class="rating-section">
+        <div class="rate rate1">
+          <div class="rating-container">
+            <img src="images/icon-star.svg" alt="rating" />
+            <img src="images/icon-star.svg" alt="rating" />
+            <img src="images/icon-star.svg" alt="rating" />
+            <img src="images/icon-star.svg" alt="rating" />
+            <img src="images/icon-star.svg" alt="rating" />
+          </div>
+          Rated 5 Stars in Reviews
+        </div>
+        <div class="rate rate2">
+          <div class="rating-container">
+            <img src="images/icon-star.svg" alt="rating" />
+            <img src="images/icon-star.svg" alt="rating" />
+            <img src="images/icon-star.svg" alt="rating" />
+            <img src="images/icon-star.svg" alt="rating" />
+            <img src="images/icon-star.svg" alt="rating" />
+          </div>
+          Rated 5 Stars in Report Guru
+        </div>
+        <div class="rate rate3">
+          <div class="rating-container">
+            <img src="images/icon-star.svg" alt="rating" />
+            <img src="images/icon-star.svg" alt="rating" />
+            <img src="images/icon-star.svg" alt="rating" />
+            <img src="images/icon-star.svg" alt="rating" />
+            <img src="images/icon-star.svg" alt="rating" />
+          </div>
+          Rated 5 Stars in BestTech
+        </div>
+      </div>
+      <div class="card-section">
+        <div class="card card1">
+          <div class="user">
+            <img src="images/image-colton.jpg" alt="user-1" />
+            <div>Colton Smith <span>Verified Buyer </span></div>
+          </div>
+          <div class="userReview">
+            "We needed the same printed design as the one we had ordered a week
+            prior. Not only did they find the original order, but we also
+            received it in time. Excellent!"
+          </div>
+        </div>
+        <div class="card card2">
+          <div class="user">
+            <img src="images/image-irene.jpg" alt="user-2" />
+            <div>Irene Roberts <span>Verified Buyer</span></div>
+          </div>
+          <div class="userReview">
+            "Customer service is always excellent and very quick turn around.
+            Completely delighted with the simplicity of the purchase and the
+            speed of delivery."
+          </div>
+        </div>
+        <div class="card card3">
+          <div class="user">
+            <img src="images/image-anne.jpg" alt="user-3" />
+            <div>Anne Wallace <span>Verified Buyer</span></div>
+          </div>
+          <div class="userReview">
+            "Put an order with this company and can only praise them for the
+            very high standard. Will definitely use them again and recommend
+            them to everyone!"
+          </div>
+        </div>
+      </div>
+
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Your Name Here</a>.
+      </div>
+    </main>
+  </body>
+</html>
