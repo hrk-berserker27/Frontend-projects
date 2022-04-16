@@ -17,8 +17,7 @@ body {
   align-items: center;
   justify-content: center;
   background-color: var(--bodybgcolor);
-}
-@media screen and (min-width: 375px){
+
   .card {
     height: 359px;
     width: 324px;
@@ -112,4 +111,4 @@ body {
     place-items: center;
     text-align: center;
   }
-}
+
