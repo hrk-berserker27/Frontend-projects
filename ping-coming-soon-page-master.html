@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <script
+      src="https://kit.fontawesome.com/a24f39efb8.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Frontend Mentor | Ping coming soon page</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-size: 20px;
+        --Blue: hsl(223, 87%, 63%);
+        --PaleBlue: hsl(223, 100%, 88%);
+        --LightRed: hsl(354, 100%, 66%);
+        --Gray: hsl(0, 0%, 59%);
+        --VeryDarkBlue: hsl(209, 33%, 12%);
+        font-family: "Libre Franklin";
+      }
+      body {
+        display: grid;
+        place-items: center;
+      }
+      main {
+        width: 100%;
+
+        /* border: 2px solid red; */
+        padding: 8rem 3rem;
+        text-align: center;
+      }
+      #logo {
+        margin-bottom: 4rem;
+      }
+      h1 {
+        font-size: 2rem;
+        font-weight: 700;
+        color: var(--VeryDarkBlue);
+      }
+      h1 span {
+        font-size: 2rem;
+        color: var(--Gray);
+        font-weight: 300;
+      }
+      button {
+        width: 100%;
+        border-radius: 2rem;
+        padding: 1rem;
+        border: none;
+        background-color: var(--Blue);
+        color: white;
+        box-shadow: 0px 15px 12px hsl(223, 87%, 63%, 0.2);
+        font-weight: 600;
+      }
+      button:hover {
+        cursor: pointer;
+        opacity: 0.8;
+      }
+      input {
+        width: 100%;
+        border-radius: 2rem;
+        padding: 1rem 2.5rem;
+        border: 1px solid var(--Blue);
+        margin-bottom: 3rem;
+      }
+      input[type="text"]:focus {
+        outline-color: var(--PaleBlue);
+      }
+      input::placeholder {
+        color: var(--PaleBlue);
+      }
+      .attribution {
+        display: none;
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+      .subscription {
+        font-size: 20px;
+        margin-top: 2rem;
+        margin-bottom: 3rem;
+        color: var(--VeryDarkBlue);
+      }
+      .container img {
+        width: 100%;
+        margin: 6rem 0;
+      }
+      footer {
+        color: var(--Gray);
+        margin-top: 10%;
+        font-weight: 300;
+      }
+      .social-media-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+        margin: 22% 0 0 0;
+      }
+      .social-media-container i {
+        color: var(--Blue);
+        font-size: 1.3rem;
+        display: block; /* important for keeping the items in center other-wise display flex doen't work*/
+      }
+      .social-media-container .btn {
+        width: 3rem;
+        height: 3rem;
+        background-color: white;
+        box-shadow: none;
+        border: 1px solid var(--PaleBlue);
+        border-radius: 50%;
+        padding: 0;
+      }
+      .btn:hover {
+        background-color: var(--Blue);
+      }
+      .btn:hover i {
+        cursor: pointer;
+        color: white;
+      }
+      form {
+        position: relative;
+      }
+      .error {
+        position: absolute;
+        content: "Please provide a valid email address";
+        width: 100%;
+        top: 40%;
+        left: 0%;
+        font-size: 0.8rem;
+        color: var(--LightRed);
+        font-style: italic;
+        display: none;
+      }
+
+      @media screen and (min-width: 1024px) {
+        main {
+          height: 1440px;
+          width: 1024px;
+          padding-top: 4rem;
+        }
+        #logo {
+          margin-bottom: 2rem;
+        }
+        form {
+          width: 80%;
+          display: flex;
+          gap: 1rem;
+          margin: auto;
+        }
+        form button[type] {
+          flex-basis: 40%;
+          box-sizing: border-box;
+          height: 100%;
+        }
+        input {
+          flex-basis: 60%;
+          padding-left: 1rem;
+        }
+        .subscription {
+          margin-top: 1rem;
+          margin-bottom: 2rem;
+          font-weight: 500;
+          color: var(--VeryDarkBlue);
+        }
+        h1 span,
+        h1 {
+          font-size: 2.5rem;
+        }
+        footer {
+          padding-top: 2rem;
+          padding-bottom: 4rem;
+          margin-top: 1rem;
+        }
+        .container {
+          width: 80%;
+          margin: auto;
+        }
+        .container img {
+          margin-bottom: 1rem;
+        }
+        .social-media-container {
+          width: 80%;
+          margin: 10rem auto;
+          margin-bottom: 1rem;
+        }
+        .social-media-container .btn {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+        }
+        .social-media-container .ad {
+          display: block;
+        }
+        .error {
+          top: 55%;
+          left: -30%;
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div id="logo">
+        <svg xmlns="http://www.w3.org/2000/svg" width="86" height="28">
+          <g fill="none">
+            <path
+              fill="#15202A"
+              d="M5.008 25c.555 0 .832-.245.832-.736v-8c0-.235.117-.352.352-.352h4.8c2.603 0 4.699-.635 6.288-1.904 1.59-1.27 2.384-3.056 2.384-5.36 0-1.621-.41-2.987-1.232-4.096-.821-1.11-1.93-1.936-3.328-2.48-1.397-.544-2.981-.816-4.752-.816h-9.6c-.341 0-.512.203-.512.608V24.36c0 .213.048.373.144.48.096.107.272.16.528.16h4.096zm5.216-13.088H6.288c-.17 0-.288-.048-.352-.144-.064-.096-.096-.25-.096-.464V5.832c0-.213.048-.363.144-.448.096-.085.25-.128.464-.128H10c1.195 0 2.144.277 2.848.832.704.555 1.056 1.376 1.056 2.464 0 1.045-.33 1.867-.992 2.464-.661.597-1.557.896-2.688.896zM27.856 25c.32 0 .544-.059.672-.176.128-.117.192-.315.192-.592v-22.4c0-.384-.17-.576-.512-.576h-4.576c-.341 0-.512.203-.512.608v22.464c0 .235.053.405.16.512.107.107.288.16.544.16h4.032zm9.312 0c.235 0 .4-.037.496-.112.096-.075.144-.197.144-.368V10.344c0-.107.037-.17.112-.192.075-.021.155.021.24.128l10.208 14.336c.128.17.245.277.352.32.107.043.256.064.448.064H52.4a.66.66 0 00.432-.144.455.455 0 00.176-.368V1.736c0-.32-.139-.48-.416-.48H49.04c-.384 0-.576.192-.576.576v13.216c0 .235-.053.352-.16.352-.085 0-.192-.085-.32-.256L38.576 1.736c-.15-.213-.277-.347-.384-.4-.107-.053-.288-.08-.544-.08h-3.872c-.384 0-.576.203-.576.608v22.592c0 .363.213.544.64.544h3.328zm30.176.32c1.664 0 3.013-.288 4.048-.864a9.158 9.158 0 002.672-2.24c.15-.17.256-.181.32-.032l.928 2.304c.192.341.47.512.832.512h1.024c.15 0 .267-.043.352-.128a.476.476 0 00.128-.352V13.736a.703.703 0 00-.24-.56c-.16-.139-.39-.208-.688-.208l-8.544-.032c-.341 0-.512.15-.512.448v2.4c0 .192.043.33.128.416.085.085.213.128.384.128h3.872c.235 0 .352.096.352.288 0 .085-.01.15-.032.192l-.064.928c-.235 1.045-.736 1.915-1.504 2.608-.768.693-1.792 1.04-3.072 1.04-1.685 0-2.976-.65-3.872-1.952-.896-1.301-1.344-3.435-1.344-6.4 0-2.837.427-4.907 1.28-6.208.853-1.301 2.101-1.952 3.744-1.952 1.259 0 2.283.363 3.072 1.088.79.725 1.29 1.643 1.504 2.752.043.192.096.325.16.4.064.075.181.112.352.112l4.224-.64c.277-.021.416-.15.416-.384 0-.192-.021-.352-.064-.48-.213-1.173-.752-2.277-1.616-3.312-.864-1.035-1.984-1.872-3.36-2.512-1.376-.64-2.896-.96-4.56-.96-2.176 0-4.096.501-5.76 1.504-1.664 1.003-2.955 2.432-3.872 4.288-.917 1.856-1.376 4.021-1.376 6.496 0 2.41.437 4.528 1.312 6.352.875 1.824 2.117 3.237 3.728 4.24 1.61 1.003 3.493 1.504 5.648 1.504z"
+            />
+            <path
+              fill="#4C7BF3"
+              d="M85.072 25c.32 0 .55-.059.688-.176.139-.117.208-.315.208-.592v-4c0-.363-.16-.544-.48-.544h-4.384a.498.498 0 00-.368.144c-.096.096-.144.24-.144.432v4.064c0 .448.235.672.704.672h3.776z"
+            />
+          </g>
+        </svg>
+      </div>
+      <h1><span>We are launching</span> soon!</h1>
+      <div class="subscription">Subscribe and get notified</div>
+      <form class="form">
+        <input class="input" type="text" placeholder="Your email address..." />
+
+        <button type="submit" class="submit">Notify Me</button>
+        <p class="error">Please provide a valid email address</p>
+      </form>
+
+      <div class="container">
+        <img
+          src="https://github.com/hrk-berserker27/Frontend-projects.git/illustration-dashboard.png"
+          alt="illustration"
+        />
+      </div>
+      <div class="social-media-container">
+        <button class="btn"><i class="fa-brands fa-facebook-f ad"></i></button>
+        <button class="btn">
+          <i class="fa-brands fa-twitter ad"></i></button
+        ><button class="btn"><i class="fa-brands fa-instagram ad"></i></button>
+      </div>
+      <footer>&copy; Copyright Ping. All rights reserved.</footer>
+    </main>
+
+    <div>
+      <p class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Hritick</a>.
+      </p>
+    </div>
+    <!--adding script-->
+  </body>
+  <script>
+    const form = document.querySelector(".form");
+    const input = document.querySelector(".input");
+    const error = document.querySelector(".error");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      let regEx = /[a-z|A-Z]+[@]gmail.com|[a-z|A-Z]+[@]outlook.com/gm;
+      if (!regEx.test(input.value)) {
+        error.style.display = "block";
+      } else {
+        error.style.display = "none";
+      }
+    });
+  </script>
+</html>
