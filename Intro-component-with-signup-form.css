@@ -1,0 +1,224 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    --mobileBackground: "https://hrk-berserker27.github.io/hosted-assets/bg-intro-mobile.png";
+    --submitButtonColor: hsl(154, 59%, 51%);
+    --offerColorSpan: hsl(248, 32%, 49%);
+    --BoxShadowColor: hsl(249, 10%, 26%);
+    --formBackgroundColor: #fff;
+    --conditionsColor: hsl(246, 25%, 77%);
+    --conditionsSpanColor: hsl(0, 100%, 74%);
+    --mobileWidth: 375px;
+    --DesktopWidth: 1440px;
+    --fontSize: 16px;
+    font-family: "Poppins";
+}
+
+body {
+    min-height: 100vh;
+    max-width: 1440px;
+    background-image: url("https://hrk-berserker27.github.io/hosted-assets/bg-intro-desktop.png");
+    background-color: var(--conditionsSpanColor);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+}
+
+.attribution {
+    display: none;
+}
+
+.main {
+    width: 80vw;
+    height: 70vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+.section-1,
+.section-2 {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.section-1 {
+    padding-left: 1em;
+    gap: 2em;
+}
+
+.section-1 h1 {
+    width: 80%;
+    line-height: 1.1em;
+    color: var(--formBackgroundColor);
+}
+
+.section-1 .content {
+    color: var(--formBackgroundColor);
+}
+
+.section-2 {
+    gap: 5%;
+    padding: 0 2em;
+    isolation: isolate;
+}
+
+.section-2 .offer {
+    background-color: var(--offerColorSpan);
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3rem;
+    font-weight: 600;
+    color: var(--formBackgroundColor);
+    box-shadow: 0 6px hsl(249, 10%, 26%, 0.2);
+    padding: 1em;
+}
+
+.section-2 .offer span {
+    color: var(--conditionsColor);
+    font-weight: normal;
+}
+
+.section-2 .form {
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+    background: var(--formBackgroundColor);
+    border-radius: 0.5rem;
+    gap: 1em;
+    box-shadow: 0 6px hsl(249, 10%, 26%, 0.2);
+}
+
+.section-2 .form input {
+    padding: 0.8em 1.5em;
+    border: 1px solid var(--conditionsColor);
+    border-radius: 0.5em;
+    font-weight: 600;
+    width: 100%;
+}
+
+label {
+    position: relative;
+}
+
+form label input:focus {
+    border: 2px solid hsl(248, 32%, 49%);
+    outline: 0;
+}
+
+.section-2 .form input[type="submit"] {
+    text-transform: uppercase;
+    font-weight: 600;
+    color: white;
+    border: 0;
+    background-color: var(--submitButtonColor);
+    box-shadow: 0 3px hsl(154, 59%, 41%);
+    color: hsl(154, 59%, 85%);
+}
+
+.section-2 .form input[type="submit"]:hover {
+    cursor: pointer;
+}
+
+.conditions {
+    font-size: 0.6em;
+    font-weight: 600;
+    text-align: center;
+    color: var(--conditionsColor);
+}
+
+.conditions span {
+    color: var(--conditionsSpanColor);
+}
+
+.errorIcon {
+    content: "";
+    width: 10%;
+    height: 72%;
+    position: absolute;
+    top: 0%;
+    right: 5%;
+    background-image: url(https://hrk-berserker27.github.io/hosted-assets//icon-error.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    display: none;
+    pointer-events: none;
+}
+
+.errorMessage {
+    width: 100%;
+    color: var(--conditionsSpanColor);
+    font-size: 10px;
+    font-weight: 600;
+    text-align: right;
+    display: none;
+    pointer-events: none;
+}
+
+.visible {
+    display: block;
+}
+
+@media screen and (max-width: 1150px) and (min-width:200px) {
+    .offer {
+        flex-direction: column;
+    }
+}
+
+@media screen and (min-width: 701px) and (max-width: 1000px) {
+    .main {
+        width: 100%;
+        padding: 1em;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    body {
+        padding: 1.5em;
+        padding-top: 3em;
+        padding-bottom: 3em;
+        max-width: 100%;
+        /*removes scroll bars*/
+    }
+
+    .section-1 {
+        text-align: center;
+        padding-top: 3em;
+    }
+
+    .section-2 {
+        padding: 0;
+        padding-top: 2em;
+        gap: 1.5em;
+    }
+
+    .main {
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+    }
+
+    .section-2 .form {
+        padding: 1.5em;
+    }
+
+    .section-1 h1 {
+        width: 100%;
+    }
+
+}
+
+@media screen and (min-width:1441px) {
+    body {
+        margin: auto;
+    }
+}
