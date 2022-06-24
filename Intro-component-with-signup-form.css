@@ -55,7 +55,7 @@ body {
 }
 
 .section-1 h1 {
-    width: 80%;
+    width: 100%;
     line-height: 1.1em;
     color: var(--formBackgroundColor);
     font-size: 4em;
