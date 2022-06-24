@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32"
+    href="https://hrk-berserker27.github.io/hosted-assets/favicon-32x32.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="index.css" type="text/css" />
+
+  <title>Frontend Mentor | Intro component with sign up form</title>
+  <script src="index.js" defer></script>
+</head>
+
+<body>
+  <main class="main">
+    <div class="section-1">
+      <h1>Learn to code by watching others</h1>
+      <p class="content">
+        See how experienced developers solve problems in real-time. Watching
+        scripted tutorials is great, but understanding how developers think is
+        invaluable.
+      </p>
+    </div>
+    <div class="section-2">
+      <div class="offer">
+        Try it free 7 days <span>then $20/mo. thereafter</span>
+      </div>
+      <form class="form">
+        <label for="first">
+          <input type="text" autocomplete="" name="first" data-id="1" placeholder="First Name">
+          <div class="errorIcon" data-id="1"></div>
+          <em class="errorMessage" data-id="1">First Name cannot be empty</em>
+        </label>
+        <label for="second">
+          <input type="text" autocomplete="" name="second" data-id="2" placeholder="Last Name">
+          <div class="errorIcon" data-id="2"></div>
+          <em class="errorMessage" data-id="2">Last Name cannot be empty</em>
+        </label>
+        <label for="third">
+          <input type="email" autocomplete="" name="third" data-id="3" placeholder="Email Address">
+          <div class="errorIcon" data-id="3"></div>
+          <em class="errorMessage" data-id="3">Looks like this is not an email</em>
+        </label>
+        <label for="fourth">
+          <input type="password" autocomplete="" name="fourth" data-id="4" placeholder="Password">
+          <div class="errorIcon" data-id="4"></div>
+          <em class="errorMessage" data-id="4">Password cannot be empty</em>
+        </label>
+
+        <input type="submit" value=" Claim your free trial" />
+        <div class="conditions">
+          By clicking the button, you are agreeing to our
+          <span>Terms and Services</span>
+        </div>
+      </form>
+
+    </div>
+  </main>
+
+  <footer>
+    <p class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a
+        href="#">Hritick Bhushan</a>.
+    </p>
+  </footer>
+</body>
+
+</html>
